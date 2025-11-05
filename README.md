@@ -42,15 +42,13 @@ Built as part of **Project Z**, it establishes the foundation for a **multi-char
 
 ```mermaid
 flowchart TD
-    A[🧑 User] -->|Message| B[💻 React Frontend]
-    B -->|POST /api/chat| C[⚙️ FastAPI Backend]
-    C -->|Request| D[🧠 LM Studio (LLaMA 3 8B)]
+    A[User] -->|Message| B[React Frontend]
+    B -->|POST /api/chat| C[FastAPI Backend]
+    C -->|Request| D[LM Studio (LLaMA 3 8B)]
     D -->|Response| C
-    C -->|Update| E[💾 memory.txt]
+    C -->|Update| E[memory.txt]
     C -->|Send Reply| B
     E -->|Recall| C
-````
-
 ---
 
 ## 🔍 Technical Stack
@@ -79,6 +77,9 @@ flowchart TD
 
 > **User:** Hey Goku, how’s your training today?
 > **Goku:** Haha! Training never stops! I just did 10,000 push-ups — gotta keep my power level high even in this AI realm!
+<p align="center">
+  <img src="https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/blob/main/V.1/demo.png" alt="Goku AI Chat Demo" width="800">
+</p>
 
 ---
 

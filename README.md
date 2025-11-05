@@ -45,10 +45,10 @@ Built as part of **Project Z**, this system lays the groundwork for a **multi-ch
 flowchart TD
     A[User] -->|Message| B[React Frontend]
     B -->|POST /api/chat| C[FastAPI Backend]
+    B <--|Send Reply| C
     C -->|Request| D[LM Studio - LLaMA 3 8B]
     D -->|Response| C
     C -->|Update| E[memory.txt]
-    C -->|Send Reply| B
     E -->|Recall| C
 ````
 

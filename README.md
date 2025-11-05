@@ -46,7 +46,7 @@ flowchart TD
     A[User] -->|Message| B[React Frontend]
     B -->|POST /api/chat| C[FastAPI Backend]
     C -->|Send Reply| B
-    C -->|Request| D[LM Studio - LLaMA 3 8B]
+    C -->|Req| D[LM Studio - LLaMA 3 8B]
     D -->|Response| C
     C -->|Update| E[memory.txt]
     E -->|Recall| C

@@ -136,10 +136,8 @@ Licensed under the [MIT License](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT
 
 ## 👤 Author
 
-**GK Thirumaran**
-🎓 *B.Tech — Artificial Intelligence and Data Science*
-🌍 *Coimbatore, Tamil Nadu, India*
-💼 *Aspiring Data Scientist & Analyst | AIML Developer*
+**GK Thirumaran**  
+🎓 *B.Tech — Artificial Intelligence and Data Science*  
+🌍 *Coimbatore, Tamil Nadu, India*  
+💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
-
-```

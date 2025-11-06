@@ -119,15 +119,6 @@ This modular design ensures each AI maintains its own story, growth, and emotion
 
 ---
 
-## 🪐 Project Ecosystem
-
-| Module                       | Description                                       | Link                                                                        |
-| :--------------------------- | :------------------------------------------------ | :-------------------------------------------------------------------------- |
-| 🧩 **Prototype Build (V.0)** | Gradio-based Goku chatbot — foundational version. | [Open → V.0](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) |
-| ⚡ **Full Build (V.1)**       | FastAPI + React single-character implementation.  | [Open → V.1](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1) |
-
----
-
 ## 📜 License
 
 Licensed under the [MIT License](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/blob/main/LICENSE).

@@ -59,7 +59,7 @@ flowchart LR
     B --> C[LM Studio API]
     C --> D[LLaMA-3 8B Instruct]
     D --> E[Response Text]
-    E --> F[memory.txt (Persistent Log)]
+    E --> F[memory_txt / Persistent_Log]
     F --> B
 ```
 
@@ -186,3 +186,4 @@ A functional **proof-of-concept chatbot** demonstrating:
 🌍 *Coimbatore, India*  
 💼 *Full-Stack AI Developer | Data Scientist | System Architect*  
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
+

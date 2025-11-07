@@ -35,7 +35,7 @@ flowchart TD
     A[User] -->|Message| B[React Frontend]
     B -->|POST /api/chat| C[FastAPI Backend]
     C -->|Request| D[LM Studio - LLaMA 3 8B]
-    D -->|Response| C
+    D -->|Res| C
     C -->|Update| E[memory.txt]
     E -->|Recall| C
     C -->|Reply| B
@@ -253,3 +253,4 @@ It transitions from a Gradio proof-of-concept to a **full production-grade archi
 🌍 *Coimbatore, India*  
 💼 *Full-Stack AI Developer | Data Scientist | System Architect*  
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
+

@@ -1,30 +1,36 @@
 # ⚡ GOKU-AI-CHATBOT — V.1 Full Build
 
-> **Project Z — Intelligent Character Chat System powered by FastAPI, React & LM Studio**  
+> **Project Z — Intelligent Character Chat System powered by FastAPI, React & LM Studio**
 > The evolution of the *Goku AI Prototype* into a full-stack intelligent persona engine.
 
-![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=brightgreen&style=for-the-badge)
-![License](https://img.shields.io/github/license/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=blue&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=yellow&style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=brightgreen\&style=for-the-badge)
+![License](https://img.shields.io/github/license/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=blue\&style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=yellow\&style=for-the-badge)
+
 ---
 
 ## 🧠 Overview
 
-**GOKU AI (V.1)** represents the **first complete version** of *Project Z* — a **modular, locally hosted intelligent character chat system**.  
-Built with **FastAPI**, **React**, and **LM Studio (LLaMA-3 8B Instruct)**, it enables real-time dialogue between the user and the AI persona **Son Goku**, complete with **persistent memory**, **custom prompts**, and a **frontend chat UI** inspired by ChatGPT.
+**GOKU AI (V.1)** represents the **first complete version** of *Project Z* — a **modular, locally hosted intelligent character chat system**.
+Built with **FastAPI**, **React**, and **LM Studio (LLaMA-3 8B Instruct)**, it enables **real-time dialogue** between the user and the AI persona **Son Goku**, complete with:
 
-This version transforms the lightweight prototype from [V.0](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) into a **scalable full-stack system** ready for multi-character expansion.
+* **Persistent memory**
+* **Custom character prompts**
+* **Frontend chat interface** inspired by ChatGPT
+* **Scalable architecture** for multi-character expansion
+
+This version evolves the lightweight prototype [V.0](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) into a **production-ready full-stack system**.
 
 ---
 
 ## 🎯 Core Vision
 
-To create a **personality-driven AI framework** that allows each character to:
+Create a **personality-driven AI framework** where each character can:
 
-- Speak in a unique **tone and style**
-- Retain **long-term memory** of conversations
-- Draw knowledge from a **character-specific database**
-- Operate seamlessly across **frontend, backend, and local model layers**
+* Speak in a **unique tone and style**
+* Retain **long-term conversation memory**
+* Draw knowledge from a **character-specific dataset**
+* Operate seamlessly across **frontend, backend, and local model layers**
 
 ---
 
@@ -35,7 +41,7 @@ flowchart TD
     A[User] -->|Message| B[React Frontend]
     B -->|POST /api/chat| C[FastAPI Backend]
     C -->|Request| D[LM Studio - LLaMA 3 8B]
-    D -->|Res| C
+    D -->|Response| C
     C -->|Update| E[memory.txt]
     E -->|Recall| C
     C -->|Reply| B
@@ -110,7 +116,7 @@ V.1/
 
 ## ⚡ Backend — FastAPI Core
 
-The **backend** acts as the orchestrator for the entire system — managing requests, persona loading, and LM Studio inference.
+The **backend orchestrates** requests, persona loading, and LM Studio inference.
 
 ### 🔧 Main Components
 
@@ -135,7 +141,7 @@ The **backend** acts as the orchestrator for the entire system — managing requ
 
 ## 💻 Frontend — React Interface
 
-A **modern chat UI** built with **React + Tailwind + Zustand**, designed for real-time AI conversation.
+A **modern chat UI** built with **React + Tailwind + Zustand**, designed for **real-time AI conversation**.
 
 ### ✨ UI Features
 
@@ -166,8 +172,9 @@ frontend/
 **.env**
 
 ```bash
-LM_STUDIO_URL=http://localhost:1234/v1/chat/completions
-MODEL_NAME=LLaMA-3-8B-Instruct
+LM_STUDIO_URL=
+MODEL_NAME=
+PORT=1234
 ```
 
 **Backend Run**
@@ -180,6 +187,7 @@ uvicorn backend.main:app --reload
 
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
 
@@ -218,27 +226,28 @@ http://127.0.0.1:5173
 
 ## 🧠 Lessons Learned
 
-* LM Studio’s LLaMA models need structured payloads (`max_tokens`, `temperature`)
-* React state sync issues fixed with **Zustand**
+* LM Studio’s LLaMA models require structured payloads (`max_tokens`, `temperature`)
+* React state sync issues resolved via **Zustand**
 * Long inference handled via **timeout management**
-* Modular backend design simplified scaling
+* Modular backend design simplified multi-character scaling
 * Logging and file utilities improved traceability
 
 ---
 
 ## 📜 Project Links
 
-| Resource               | Link                                                                                  |
-| :--------------------- | :------------------------------------------------------------------------------------ |
-| 🏠 **Main Repository** | [GOKU-AI-CHATBOT](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT)                    |
-| 📂 **V.0 Folder**      | [Prototype Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0)      |
-| ⚡ **V.1 Folder**       | [Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1)           |
+| Resource               | Link                                                                             |
+| :--------------------- | :------------------------------------------------------------------------------- |
+| 🏠 **Main Repository** | [GOKU-AI-CHATBOT](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT)               |
+| 📂 **V.0 Folder**      | [Prototype Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) |
+| ⚡ **V.1 Folder**       | [Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1)      |
+
 ---
 
 ## 🧩 How It Fits in the Whole Project
 
-**V.1** is the **first complete implementation** of *Project Z — Goku AI*, building directly on the prototype foundation of [V.0](../V.0/README.md).
-It transitions from a Gradio proof-of-concept to a **full production-grade architecture**, paving the way for multi-character RAG-based systems in future versions.
+**V.1** is the **first complete implementation** of *Project Z — Goku AI*, building on the prototype foundation of [V.0](../V.0/README.md).
+It transitions from a Gradio proof-of-concept to a **full production-grade architecture**, enabling **multi-character RAG-based AI systems** in future versions.
 
 > 🌱 The seed (V.0) has grown — V.1 is its first true form.
 
@@ -247,10 +256,8 @@ It transitions from a Gradio proof-of-concept to a **full production-grade archi
 ---
 
 ## 👤 Author
-
 **GK Thirumaran**  
-🎓 *B.Tech — Artificial Intelligence & Data Science*  
-🌍 *Coimbatore, India*  
-💼 *Full-Stack AI Developer | Data Scientist | System Architect*  
-🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
-
+🎓 *B.Tech Artificial Intelligence and Data Science*  
+🌍 *Coimbatore, Tamil Nadu, India*  
+💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
+🔗 [Linkedin](https://www.linkedin.com/in/thirumarangk-ai) | [Porfolio](https://maranthiru180.wixsite.com/my-site)

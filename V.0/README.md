@@ -1,11 +1,11 @@
 # 🧩 GOKU-AI-CHATBOT — V.0 Prototype Build
 
-> **Project Z — Persona-Driven Conversational AI (Gradio + LM Studio Prototype)**  
+> **Project Z — Persona-Driven Conversational AI (Gradio + LM Studio Prototype)**
 > The foundation of the *Goku AI Chatbot Universe.*
 
-![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=brightgreen&style=for-the-badge)
-![License](https://img.shields.io/github/license/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=blue&style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=yellow&style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=brightgreen\&style=for-the-badge)
+![License](https://img.shields.io/github/license/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=blue\&style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=yellow\&style=for-the-badge)
 
 ---
 
@@ -21,33 +21,33 @@ This version focuses on **local execution, modular design, and character consist
 
 To create a **personalized AI character system** capable of:
 
-- Responding in Goku’s tone and style  
-- Remembering past chats via text-based memory  
-- Integrating curated lore into contextual dialogue  
-- Serving as the **foundation** for future RAG-based multi-character builds
+* Responding in Goku’s tone and style
+* Remembering past chats via text-based memory
+* Integrating curated lore into contextual dialogue
+* Serving as the **foundation** for future RAG-based multi-character builds
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Layer              | Tool / Library                               | Description |
-| ------------------ | -------------------------------------------- | ------------ |
+| Layer              | Tool / Library                               | Description                                        |
+| ------------------ | -------------------------------------------- | -------------------------------------------------- |
 | **Model Backend**  | **Meta LLaMA 3 8B Instruct (via LM Studio)** | Core LLM providing persona-aligned text generation |
-| **Frontend**       | **Gradio**                                   | Simple, shareable web UI for chat interaction |
-| **Development**    | **Python + Jupyter Notebook**                | Rapid prototype & test environment |
-| **Memory**         | `memory.txt`                                 | Stores user–AI dialogue history |
-| **Persona Prompt** | `prompt.txt`                                 | Defines Goku’s personality and tone |
-| **Knowledge Base** | `knowledge.txt`                              | Contains curated lore for contextual replies |
+| **Frontend**       | **Gradio**                                   | Simple, shareable web UI for chat interaction      |
+| **Development**    | **Python + Jupyter Notebook**                | Rapid prototype & test environment                 |
+| **Memory**         | `memory.txt`                                 | Stores user–AI dialogue history                    |
+| **Persona Prompt** | `prompt.txt`                                 | Defines Goku’s personality and tone                |
+| **Knowledge Base** | `knowledge.txt`                              | Contains curated lore for contextual replies       |
 
 ---
 
 ## 🧩 Core Features
 
-- 🗣️ **Persona Engine** — Replies like Goku; energetic, direct, and humorous  
-- 💾 **Memory System** — Persists conversations using `memory.txt`  
-- 📚 **Knowledge Integration** — Reads `knowledge.txt` for accurate responses  
-- 🧰 **Modular Design** — Swap persona or model easily  
-- 🌐 **Deployable Gradio Interface** — Local + public (`share=True`) support  
+* 🗣️ **Persona Engine** — Replies like Goku; energetic, direct, and humorous
+* 💾 **Memory System** — Persists conversations using `memory.txt`
+* 📚 **Knowledge Integration** — Reads `knowledge.txt` for accurate responses
+* 🧰 **Modular Design** — Swap persona or model easily
+* 🌐 **Deployable Gradio Interface** — Local + public (`share=True`) support
 
 ---
 
@@ -74,7 +74,6 @@ flowchart LR
 │   memory.txt
 │   requirements.txt
 │   embed_cache.pkl
-
 ```
 
 ---
@@ -104,13 +103,13 @@ flowchart LR
 
 ## 🧱 Key Scripts
 
-| File                   | Role                                                               |
-| ---------------------- | ------------------------------------------------------------------ |
-| `app.py`               | Core app entrypoint; initializes Gradio UI and handles model calls |
-| `prompt.txt`           | Character behavior definitions                                     |
-| `knowledge.txt`        | Static world/lore database                                         |
-| `memory.txt`           | Persistent conversation log                                        |
-| `embed_cache.pkl`      | Development for quick prototyping                                  |
+| File              | Role                                                               |
+| ----------------- | ------------------------------------------------------------------ |
+| `app.py`          | Core app entrypoint; initializes Gradio UI and handles model calls |
+| `prompt.txt`      | Character behavior definitions                                     |
+| `knowledge.txt`   | Static world/lore database                                         |
+| `memory.txt`      | Persistent conversation log                                        |
+| `embed_cache.pkl` | Development for quick prototyping                                  |
 
 ---
 
@@ -136,36 +135,77 @@ iface.launch(share=True)
 
 ---
 
-## 🚀 Future Goals (Toward V.1)
+## ⚙️ Environment Setup
 
-| Feature                     | Upgrade Path                                     |
-| --------------------------- | ------------------------------------------------ |
-| **Backend**                 | Migrate to FastAPI for modular API routes        |
-| **Frontend**                | Move from Gradio → React (Vite + Tailwind)       |
-| **Memory**                  | Replace text logs with SQLite or JSON DB         |
-| **Retrieval**               | Introduce FAISS/Chroma RAG for contextual search |
-| **Multi-Character Support** | Add Vegeta, Piccolo, etc.                        |
+1. **Clone Repository**
+
+```bash
+git clone https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT.git
+cd GOKU-AI-CHATBOT/V.0
+```
+
+2. **Create Virtual Environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate  
+```
+
+3. **Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Prepare `.env`**
+
+```
+# Example .env entries
+LMSTUDIO_PATH=/path/to/lmstudio
+MODEL_NAME=Meta-LLaMA-3-8B-Instruct
+```
+
+5. **Run Prototype**
+
+```bash
+python app.py
+```
+
+> Access locally via `http://127.0.0.1:7860` or use `share=True` to get a public link.
 
 ---
 
-## ✅ Outcome
+## ✅ Current Capabilities
 
-A functional **proof-of-concept chatbot** demonstrating:
+| Feature                | Status                        |
+| ---------------------- | ----------------------------- |
+| Persona-driven replies | ✅ Fully functional            |
+| Text-based memory      | ✅ Persistent via `memory.txt` |
+| Knowledge integration  | ✅ Reads `knowledge.txt`       |
+| Modular design         | ✅ Swapable persona & model    |
+| Gradio interface       | ✅ Local + shareable           |
 
-* Persona-driven response behavior
-* Persistent conversational memory
-* Modular architecture ready for scaling
-* Full local execution (no external API costs)
+---
+
+## 🚀 Future Roadmap (Toward V.1)
+
+| Goal                        | Description                                                     |
+| --------------------------- | --------------------------------------------------------------- |
+| **Backend Migration**       | Move from Gradio → FastAPI for modular API routes               |
+| **Frontend Upgrade**        | React + Vite + Tailwind for interactive UI                      |
+| **Memory System**           | Replace text logs with SQLite or JSON DB                        |
+| **RAG Search Integration**  | Add FAISS/Chroma vector-based retrieval for contextual accuracy |
+| **Multi-Character Support** | Introduce Vegeta, Piccolo, and other characters                 |
 
 ---
 
 ## 🔗 Project Links
 
-| Resource               | Link                                                                                  |
-| ---------------------- | ------------------------------------------------------------------------------------- |
-| 🏠 **Main Repository** | [GOKU-AI-CHATBOT](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT)                    |
-| 📂 **V.0 Folder**      | [Prototype Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0)      |
-| ⚡ **V.1 Folder**       | [Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1)           |
+| Resource               | Link                                                                             |
+| ---------------------- | -------------------------------------------------------------------------------- |
+| 🏠 **Main Repository** | [GOKU-AI-CHATBOT](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT)               |
+| 📂 **V.0 Folder**      | [Prototype Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) |
+| ⚡ **V.1 Folder**       | [Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1)      |
 
 ---
 
@@ -180,10 +220,8 @@ A functional **proof-of-concept chatbot** demonstrating:
 ---
 
 ## 👤 Author
-
 **GK Thirumaran**  
-🎓 *B.Tech — Artificial Intelligence & Data Science*  
-🌍 *Coimbatore, India*  
-💼 *Full-Stack AI Developer | Data Scientist | System Architect*  
-🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
-
+🎓 *B.Tech Artificial Intelligence and Data Science*  
+🌍 *Coimbatore, Tamil Nadu, India*  
+💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
+🔗 [Linkedin](https://www.linkedin.com/in/thirumarangk-ai) | [Porfolio](https://maranthiru180.wixsite.com/my-site)

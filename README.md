@@ -1,6 +1,3 @@
-Perfect. Based on your clarifications, here’s a fully polished, **copy-paste ready README.md** for your `GOKU-AI-CHATBOT` repo:
-
-````markdown
 # ⚡ GOKU-AI-CHATBOT
 
 > **Project Z — Intelligent Character Chat System powered by FastAPI, React & LM Studio**  

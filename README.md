@@ -1,6 +1,9 @@
-# GOKU-AI-CHATBOT
+Perfect. Based on your clarifications, here’s a fully polished, **copy-paste ready README.md** for your `GOKU-AI-CHATBOT` repo:
 
-> **Project Z — Intelligent Character Chat System powered by FastAPI, React & LM Studio**
+````markdown
+# ⚡ GOKU-AI-CHATBOT
+
+> **Project Z — Intelligent Character Chat System powered by FastAPI, React & LM Studio**  
 
 ![Repo Size](https://img.shields.io/github/repo-size/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=brightgreen&style=for-the-badge)
 ![License](https://img.shields.io/github/license/GKTHIRUMARAN/GOKU-AI-CHATBOT?color=blue&style=for-the-badge)
@@ -10,7 +13,7 @@
 
 ## 🧠 Overview
 
-**GOKU AI** is a modular, locally hosted **intelligent character chat system** that brings fictional personalities to life using **FastAPI**, **React**, and **LLaMA-3 (8B Instruct)** through **LM Studio**.
+**GOKU AI** is a modular, locally hosted **intelligent character chat system** that brings fictional personalities to life using **FastAPI**, **React**, and **LLaMA-3 (8B)** through **LM Studio**.
 
 It demonstrates complete **end-to-end AI integration** — combining backend logic, frontend design, and local model inference — to emulate personality-driven, memory-based conversations.  
 The first character implemented is **Son Goku** from *Dragon Ball*.
@@ -24,7 +27,7 @@ Built as part of **Project Z**, this system lays the groundwork for a **multi-ch
 | Version | Description | Key Tech |
 | :------ | :----------- | :-------- |
 | [V.0 — Prototype](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.0) | Gradio-based proof of concept using LM Studio and text memory. | Python, Gradio, LLaMA-3 |
-| [V.1 — Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1) | FastAPI + React full implementation with persistent memory and persona system. | FastAPI, React, Tailwind, Zustand |
+| [V.1 — Full Build](https://github.com/GKTHIRUMARAN/GOKU-AI-CHATBOT/tree/main/V.1) | FastAPI + React full implementation with persistent memory and persona system. | FastAPI, React, Tailwind, Zustand, LLaMA-3 |
 
 ---
 
@@ -50,7 +53,7 @@ flowchart TD
     D -->|Response| C
     C -->|Update| E[memory.txt]
     E -->|Recall| C
-```
+````
 
 ---
 

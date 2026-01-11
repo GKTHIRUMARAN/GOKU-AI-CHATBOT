@@ -263,8 +263,9 @@ Chat:     http://localhost:8000
 
 ## 👤 Author
 
-**GK Thirumaran**
-🎓 *B.Tech — Artificial Intelligence & Data Science*
-🌍 *Coimbatore, Tamil Nadu, India*
-💼 *Aspiring Data Scientist & Analyst | AIML Developer*
+**GK Thirumaran**  
+🎓 *B.Tech — Artificial Intelligence & Data Science*  
+🌍 *Coimbatore, Tamil Nadu, India*  
+💼 *Aspiring Data Scientist & Analyst | AIML Developer*  
 🔗 [LinkedIn](https://www.linkedin.com/in/thirumarangk-ai) | [Portfolio](https://maranthiru180.wixsite.com/my-site)
+

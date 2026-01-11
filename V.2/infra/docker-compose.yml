@@ -1,0 +1,142 @@
+version: "3.9"
+
+services:
+  # --------------------------------------------------
+  # Database
+  # --------------------------------------------------
+  postgres:
+    image: postgres:15
+    container_name: goku-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: goku
+      POSTGRES_PASSWORD: goku_pass
+      POSTGRES_DB: goku_auth
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"   # expose only for local dev
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U goku"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - goku-net
+
+  # --------------------------------------------------
+  # Auth Service
+  # --------------------------------------------------
+  auth-service:
+    build:
+      context: ../services/auth-service
+    container_name: goku-auth-service
+    restart: unless-stopped
+    env_file:
+      - ../services/auth-service/.env
+    volumes:
+      - ../services/auth-service/app:/app/app
+    ports:
+      - "8001:8001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - goku-net
+
+  # --------------------------------------------------
+  # Memory Service
+  # --------------------------------------------------
+  memory-service:
+    build:
+      context: ../services/memory-service
+    container_name: goku-memory-service
+    restart: unless-stopped
+    env_file:
+      - ../services/memory-service/.env
+    volumes:
+      - ../services/memory-service/app:/app/app
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8003/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - goku-net
+
+  # --------------------------------------------------
+  # Billing Service
+  # --------------------------------------------------
+  billing-service:
+    build:
+      context: ../services/billing-service
+    container_name: goku-billing-service
+    restart: unless-stopped
+    env_file:
+      - ../services/billing-service/.env
+    volumes:
+      - ../services/billing-service/app:/app/app
+    ports:
+      - "8004:8004"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8004/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - goku-net
+
+  # --------------------------------------------------
+  # Chat Service (CORE ENTRY POINT)
+  # --------------------------------------------------
+  chat-service:
+    build:
+      context: ../services/chat-service
+    container_name: goku-chat-service
+    restart: unless-stopped
+    env_file:
+      - ../services/chat-service/.env
+    volumes:
+      - ../services/chat-service/app:/app/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      auth-service:
+        condition: service_healthy
+      memory-service:
+        condition: service_healthy
+      billing-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - goku-net
+
+# --------------------------------------------------
+# Networks
+# --------------------------------------------------
+networks:
+  goku-net:
+    driver: bridge
+
+# --------------------------------------------------
+# Volumes
+# --------------------------------------------------
+volumes:
+  postgres_data:

@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]==0.29.0
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+alembic
